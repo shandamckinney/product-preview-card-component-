@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Hanken+Grotesk:wght@500;700;800&family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Product preview card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+    body {
+      background-color: hsl(30, 38%, 92%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 5rem 12rem;
+      color: hsl(228, 12%, 48%);
+    }
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Fraunces', serif;
+    }
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: black;
+      @media (max-width: 1080px){
+        font-size: 1.75rem;
+      }
+      @media (max-width: 724px){
+        font-size: 1rem;
+      }
+    }
+    h2 {
+      font-size: 2.125rem;
+      font-weight: 700;
+      color: hsl(158, 36%, 37%);
+      margin: 0;
+      @media (max-width: 1080px){
+        font-size: 1.25rem;
+      }
+      @media (max-width: 724px){
+        font-size: .75rem;
+      }
+    }
+    p {
+      font-family: 'Montserrat', sans-serif;
+      font-size: .875rem;
+      @media (max-width: 1080px){
+        font-size: .75rem;
+      }
+      @media (max-width: 724px){
+        font-size: .6rem;
+      }
+    }
+    button {
+      background-color: hsl(158, 36%, 37%);
+      color: white;
+      border: 0;
+      border-radius: 5px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    button:hover {
+      transform:scale(1.1)
+    }
+    #card {
+      display: flex;
+      @media (max-width: 860px){
+        display: block;
+      }
+    }
+    #left-image {
+      width: 50%;
+      @media (max-width: 860px){
+        width: 100%;
+      }
+    }
+    #perfume-image {
+      height: 35rem;
+      width: 100%;
+      object-fit: cover;
+      border-top-left-radius: 10px;
+      border-bottom-left-radius: 10px;
+
+      @media (max-width: 1080px){
+        height: 30rem;
+      }
+      @media (max-width: 860px){
+        border-bottom-left-radius: 0px;
+        border-top-right-radius: 10px;
+        margin-bottom: -3px;
+        height: 26rem;
+        object-position: center;
+      }
+    }
+    #right-side {
+      background-color: white;
+      width: 41%;
+      padding: 2rem;
+      border-top-right-radius: 10px;
+      border-bottom-right-radius: 10px;
+      height: 31rem;
+
+      @media (max-width: 1080px){
+        height: 26rem;
+      }
+      @media (max-width: 860px){
+       width: inherit;
+       border-top-right-radius: 0px;
+       border-bottom-left-radius: 10px;
+       height: 20rem;
+      }
+      @media (max-width: 724px){
+        height: 20rem;
+      }
+      @media (max-width: 724px){
+        height: 15rem;
+      }
+      @media (max-width: 615px){
+        height: 18rem;
+      }
+      @media (max-width: 586px){
+        height: 21rem;
+      }
+    }
+    #perfume-header{
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-size: 1rem;
+      @media (max-width: 1080px){
+        font-size: .75rem;
+      }
+      @media (max-width: 724px){
+        font-size: .5rem;
+      }
+    }
+    #perfume-text {
+      line-height: 22px;
+    }
+    #prices {
+      display: flex;
+      align-items: center;
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+      @media (max-width: 1080px){
+        margin-top: 1.5rem;
+      margin-bottom: 1.5rem;
+      }
+      @media (max-width: 724px){
+        margin-top: 1rem;
+      margin-bottom: 1rem;
+      }
+    }
+    #original-price {
+      padding-left: 1.5rem;
+      text-decoration: line-through;
+      margin: 0;
+    }
+    #cart-icon {
+      padding-right: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <div id="card">
+    <div id="left-image">
+      <div>
+        <img id="perfume-image" src="./images/image-product-desktop.jpg" alt="perfume bottle on eucalyptus leaves." />
+      </div>
+    </div>
+    <div id="right-side">
+      <p id="perfume-header">Perfume</p>
+    
+      <h1>Gabrielle Essence Eau De Parfum</h1>
+    
+      <p id="perfume-text">A floral, solar and voluptuous interpretation composed by Olivier Polge, 
+        Perfumer-Creator for the House of CHANEL.</p>
+    
+      <div id="prices">
+        <h2>$149.99</h2>
+        <p id="original-price">$169.99</p>
+      </div>
+    
+      <button><span><img id="cart-icon" src="./images/icon-cart.svg" alt="grocery card icon"/></span><p>Add to Cart</p></button>
+    </div>
+  </div>
+</body>
+</html>
